@@ -3295,7 +3295,7 @@ table tr td  {
 table #baslik {
 	font-weight:400;
 background-color:#0038AE;
-	color:#FCFCFC;
+color:#FCFCFC;
 	
 	
 }
@@ -3403,8 +3403,8 @@ background-color:#0038AE;
 
 #satirlar .col-md-12 input[type="submit"] {
 background-color:#0038AE;
-	color:#FCFCFC;
-	margin:5px 0px 5px 0px;
+color:#FCFCFC;
+margin:5px 0px 5px 0px;
 
 	
 	
@@ -3412,9 +3412,9 @@ background-color:#0038AE;
 
 #satirlarbaslik {
 background-color:#0038AE;
-	color:#FCFCFC;
-	border-bottom:#CACACA 1px solid;
-	padding:10px;	
+color:#FCFCFC;
+border-bottom:#CACACA 1px solid;
+padding:10px;	
 
 	
 	

@@ -1,4 +1,247 @@
- .bg-gradient-mvc{background-color:#193db0;background-image:-webkit-gradient(linear,left top,left bottom,color-stop(10%,#193db0),to(#582975));background-image:linear-gradient(180deg,#193db0 10%,#582975 100%);background-size:cover}
+/* Temel Stiller */
+body {
+    background-color: #f8f9fc;
+}
+
+/* Sidebar Stilleri */
+.sidebar {
+    width: 14rem !important;
+    background: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
+    min-height: 100vh;
+}
+
+.sidebar-brand {
+    height: 4.375rem;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 800;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    z-index: 1;
+}
+
+.sidebar-brand .sidebar-brand-icon i {
+    font-size: 2rem;
+}
+
+.sidebar-brand .sidebar-brand-text {
+    display: inline;
+    color: #fff;
+}
+
+/* Nav Stilleri */
+.sidebar .nav-item {
+    position: relative;
+}
+
+.sidebar .nav-item .nav-link {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    width: 14rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.sidebar .nav-item .nav-link:hover {
+    color: #fff;
+}
+
+.sidebar .nav-item .nav-link i {
+    font-size: 0.85rem;
+    margin-right: 0.25rem;
+}
+
+.sidebar .nav-item .nav-link[data-toggle="collapse"]::after {
+    width: 1rem;
+    text-align: center;
+    float: right;
+    vertical-align: 0;
+    border: 0;
+    font-weight: 900;
+    content: '\f107';
+    font-family: 'Font Awesome 5 Free';
+}
+
+/* Collapse Stilleri */
+.sidebar .nav-item .collapse {
+    position: relative;
+}
+
+.sidebar .nav-item .collapse .collapse-inner {
+    border-radius: 0.35rem;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+.sidebar .nav-item .collapse .collapse-inner .collapse-header {
+    margin: 0;
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 0.65rem;
+    color: #b7b9cc;
+}
+
+.sidebar .nav-item .collapse .collapse-inner .collapse-item {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    display: block;
+    color: #3a3b45;
+    text-decoration: none;
+    border-radius: 0.35rem;
+    white-space: nowrap;
+}
+
+.sidebar .nav-item .collapse .collapse-inner .collapse-item:hover {
+    background-color: #eaecf4;
+}
+
+.sidebar .nav-item .collapse .collapse-inner .collapse-item:active {
+    background-color: #dddfeb;
+}
+
+.sidebar .nav-item .collapse .collapse-inner .collapse-item.active {
+    color: #4e73df;
+    font-weight: 700;
+}
+
+/* Responsive Stiller */
+@media (min-width: 768px) {
+    .sidebar {
+        width: 14rem !important;
+    }
+    
+    .sidebar .nav-item .nav-link {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 1rem;
+        width: 14rem;
+    }
+    
+    .sidebar .nav-item .nav-link i {
+        font-size: 0.85rem;
+        margin-right: 0.25rem;
+    }
+    
+    .sidebar .nav-item .nav-link[data-toggle="collapse"]::after {
+        width: 1rem;
+        text-align: center;
+        float: right;
+        vertical-align: 0;
+        border: 0;
+        font-weight: 900;
+        content: '\f107';
+        font-family: 'Font Awesome 5 Free';
+    }
+    
+    .sidebar .nav-item .collapse {
+        position: relative;
+    }
+    
+    .sidebar .nav-item .collapse .collapse-inner {
+        border-radius: 0.35rem;
+        box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    }
+    
+    .sidebar .nav-item .collapse .collapse-inner .collapse-header {
+        margin: 0;
+        white-space: nowrap;
+        padding: 0.5rem 1rem;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 0.65rem;
+        color: #b7b9cc;
+    }
+    
+    .sidebar .nav-item .collapse .collapse-inner .collapse-item {
+        padding: 0.5rem 1rem;
+        margin: 0 0.5rem;
+        display: block;
+        color: #3a3b45;
+        text-decoration: none;
+        border-radius: 0.35rem;
+        white-space: nowrap;
+    }
+    
+    .sidebar .nav-item .collapse .collapse-inner .collapse-item:hover {
+        background-color: #eaecf4;
+    }
+    
+    .sidebar .nav-item .collapse .collapse-inner .collapse-item:active {
+        background-color: #dddfeb;
+    }
+    
+    .sidebar .nav-item .collapse .collapse-inner .collapse-item.active {
+        color: #4e73df;
+        font-weight: 700;
+    }
+}
+
+/* Özel Stiller */
+.sidebar.toggled {
+    width: 0 !important;
+    overflow: hidden;
+}
+
+.sidebar.toggled .nav-item .nav-link {
+    text-align: center;
+    padding: 0.75rem 1rem;
+    width: 6.5rem;
+}
+
+.sidebar.toggled .nav-item .nav-link span {
+    font-size: 0.65rem;
+    display: block;
+}
+
+.sidebar.toggled .nav-item .nav-link i {
+    margin-right: 0;
+}
+
+.sidebar.toggled .nav-item .nav-link[data-toggle="collapse"]::after {
+    display: none;
+}
+
+.sidebar.toggled .nav-item .collapse {
+    position: absolute;
+    background-color: inherit;
+}
+
+.sidebar.toggled .nav-item .collapse .collapse-inner {
+    box-shadow: none;
+    padding: 0.5rem 0;
+}
+
+.sidebar.toggled .nav-item .collapse .collapse-inner .collapse-header {
+    display: none;
+}
+
+.sidebar.toggled .nav-item .collapse .collapse-inner .collapse-item {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    border-radius: 0.35rem;
+    white-space: nowrap;
+}
+
+.sidebar.toggled .nav-item .collapse .collapse-inner .collapse-item:hover {
+    background-color: #eaecf4;
+}
+
+.sidebar.toggled .nav-item .collapse .collapse-inner .collapse-item:active {
+    background-color: #dddfeb;
+}
+
+.sidebar.toggled .nav-item .collapse .collapse-inner .collapse-item.active {
+    color: #4e73df;
+    font-weight: 700;
+}
+
+.bg-gradient-mvc{background-color:#193db0;background-image:-webkit-gradient(linear,left top,left bottom,color-stop(10%,#193db0),to(#582975));background-image:linear-gradient(180deg,#193db0 10%,#582975 100%);background-size:cover}
  
   .bg-gradient-gri{background-color:#e3e5e5;background-image:-webkit-gradient(linear,left top,left bottom,color-stop(10%,#e3e5e5),to(#e2eaea));background-image:linear-gradient(180deg,#e3e5e5 10%,#e2eaea 100%);background-size:cover}
   
